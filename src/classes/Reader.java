@@ -10,7 +10,7 @@ public class Reader {
     }
 
     public Boolean yesNo() {
-        var input = scanner.nextLine();
+        var input = readString();
         return input.startsWith("S") || input.startsWith("Y");
     }
 }
