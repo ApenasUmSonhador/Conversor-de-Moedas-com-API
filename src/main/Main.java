@@ -2,17 +2,14 @@ package main;
 
 import java.io.IOException;
 
-import com.google.gson.JsonElement;
-
 import classes.Catalog;
 import classes.Exchange;
 import classes.Reader;
 import api.ApiConnection;
-import api.JsonTranslator;
+import api.ApiResponse;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        JsonTranslator translator = new JsonTranslator();
         Catalog catalog = new Catalog();
         Reader reader = new Reader();
         catalog.showCatalog(reader);
@@ -23,8 +20,8 @@ public class Main {
         String currency2 = reader.readString();
         System.out.println("Digite o valor a ser convertido:");
         String amount = reader.readString();
-        JsonElement json = api.connect(currency, currency2, amount);
-        Exchange exchange = translator.translateJson(json);
+        ApiResponse response = api.connect(currency, currency2, amount);
+        Exchange exchange = new Exchange(response);
         exchange.showExchange();
     }
 }
