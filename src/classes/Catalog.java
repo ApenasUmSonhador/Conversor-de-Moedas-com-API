@@ -1,8 +1,15 @@
 package classes;
 
+/*
+ * Catalog class to show the available currency codes
+ * @param showCatalog: Method to show the available currency codes
+ * @param reader: Reader object to read the user input
+ * @param reader.yesNo: Method to read a yes or no answer from the user
+ */
 public class Catalog {
+    // Show the available currency codes
     public void showCatalog(Reader reader) {
-        System.out.println("Necessita ver o catálogo de código de moedas disponíveis?");
+        System.out.println("Necessita ver o catálogo de código de moedas disponíveis? (S/N)");
         if (reader.yesNo()) {
             System.out.println("-----------------------------");
             System.out.println("Códigos de moedas disponíveis:");
