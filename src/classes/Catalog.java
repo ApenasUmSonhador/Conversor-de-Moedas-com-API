@@ -1,5 +1,7 @@
 package classes;
 
+import utils.Reader;
+
 /*
  * Catalog class to show the available currency codes
  * @param showCatalog: Method to show the available currency codes

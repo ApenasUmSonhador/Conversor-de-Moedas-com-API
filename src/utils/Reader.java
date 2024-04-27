@@ -1,4 +1,4 @@
-package classes;
+package utils;
 /*
  * Reader class to read the user input
  * @method readString: Read a string from the user

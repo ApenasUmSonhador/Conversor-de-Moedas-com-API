@@ -19,7 +19,7 @@ import java.io.IOException;
  */
 import classes.Catalog;
 import classes.Exchange;
-import classes.Reader;
+import utils.Reader;
 import api.ApiConnection;
 import api.ApiResponse;
 
