@@ -36,55 +36,38 @@ public class TimeFormatter {
 
     // Get the month number
     private String getMonthNumber() {
+        String monthNumber;
         switch (this.month) {
-            case "Jan":
-                return "01";
-            case "Feb":
-                return "02";
-            case "Mar":
-                return "03";
-            case "Apr":
-                return "04";
-            case "May":
-                return "05";
-            case "Jun":
-                return "06";
-            case "Jul":
-                return "07";
-            case "Aug":
-                return "08";
-            case "Sep":
-                return "09";
-            case "Oct":
-                return "10";
-            case "Nov":
-                return "11";
-            case "Dec":
-                return "12";
-            default:
-                return "00";
+            case "Jan" -> monthNumber = "01";
+            case "Feb" -> monthNumber = "02";
+            case "Mar" -> monthNumber = "03";
+            case "Apr" -> monthNumber = "04";
+            case "May" -> monthNumber = "05";
+            case "Jun" -> monthNumber = "06";
+            case "Jul" -> monthNumber = "07";
+            case "Aug" -> monthNumber = "08";
+            case "Sep" -> monthNumber = "09";
+            case "Oct" -> monthNumber = "10";
+            case "Nov" -> monthNumber = "11";
+            case "Dec" -> monthNumber = "12";
+            default -> monthNumber = "00";
         }
+        return monthNumber;
     }
 
     // Get the day of the week in Portuguese
     private String getDayOfWeekInPT() {
+        String dayOfWeekPt;
         switch (this.dayOfWeek) {
-            case "Mon":
-                return "Segunda-feira";
-            case "Tue":
-                return "Terça-feira";
-            case "Wed":
-                return "Quarta-feira";
-            case "Thu":
-                return "Quinta-feira";
-            case "Fri":
-                return "Sexta-feira";
-            case "Sat":
-                return "Sábado";
-            case "Sun":
-                return "Domingo";
-            default:
-                return "Dia da semana desconhecido";
+            case "Mon" -> dayOfWeekPt = "Segunda-feira";
+            case "Tue" -> dayOfWeekPt = "Terça-feira";
+            case "Wed" -> dayOfWeekPt = "Quarta-feira";
+            case "Thu" -> dayOfWeekPt = "Quinta-feira";
+            case "Fri" -> dayOfWeekPt = "Sexta-feira";
+            case "Sat" -> dayOfWeekPt = "Sábado";
+            case "Sun" -> dayOfWeekPt = "Domingo";
+            default -> dayOfWeekPt = "Dia da semana desconhecido";
         }
+        return dayOfWeekPt;
     }
 }
