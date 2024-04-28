@@ -17,8 +17,8 @@ import java.io.IOException;
  * @param reader: The reader object
  * @param api: The API connection object
  */
-import classes.Catalog;
 import classes.Exchange;
+import utils.Catalog;
 import utils.Reader;
 import api.ApiConnection;
 import api.ApiResponse;

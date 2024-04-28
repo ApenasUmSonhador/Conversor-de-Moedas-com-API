@@ -1,4 +1,4 @@
-package classes;
+package utils;
 
 import utils.Reader;
 
