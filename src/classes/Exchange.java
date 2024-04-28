@@ -20,8 +20,11 @@ package classes;
  * @method getFinalValue: Get the final value after conversion
  */
 import api.ApiResponse;
+import utils.TimeFormatter;
 
 public class Exchange {
+    // The time formatter
+    TimeFormatter timeFormatter;
     // The base currency
     private String currency1, currency2, rate, result, last_update;
     // The final value after conversion
@@ -42,7 +45,8 @@ public class Exchange {
         this.currency2 = response.targetCode();
         this.rate = String.valueOf(response.conversionRate());
         this.result = response.result();
-        this.last_update = response.timeLastUpdateUtc();
+        this.timeFormatter = new TimeFormatter(response.timeLastUpdateUtc());
+        this.last_update = this.timeFormatter.formatFullDate();
         this.finalValue = response.finalValue();
     }
 
